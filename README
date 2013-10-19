@@ -1,0 +1,6 @@
+RadialButton
+============
+
+RadialButton is a button control for Cocoa Touch
+which has a "pie slice" shape with 2 arc borders
+(an inner arc and an outer arc).
