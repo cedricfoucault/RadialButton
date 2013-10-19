@@ -21,6 +21,7 @@
 		82AD249318119F85002F4573 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AD247518119F85002F4573 /* UIKit.framework */; };
 		82AD249B18119F85002F4573 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 82AD249918119F85002F4573 /* InfoPlist.strings */; };
 		82AD249D18119F85002F4573 /* RadialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD249C18119F85002F4573 /* RadialTests.m */; };
+		82AD24A81811A008002F4573 /* RadialButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AD24A71811A008002F4573 /* RadialButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		82AD249818119F85002F4573 /* RadialTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RadialTests-Info.plist"; sourceTree = "<group>"; };
 		82AD249A18119F85002F4573 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		82AD249C18119F85002F4573 /* RadialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RadialTests.m; sourceTree = "<group>"; };
+		82AD24A61811A008002F4573 /* RadialButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadialButton.h; sourceTree = "<group>"; };
+		82AD24A71811A008002F4573 /* RadialButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadialButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				82AD248318119F85002F4573 /* Main.storyboard */,
 				82AD248618119F85002F4573 /* ViewController.h */,
 				82AD248718119F85002F4573 /* ViewController.m */,
+				82AD24A61811A008002F4573 /* RadialButton.h */,
+				82AD24A71811A008002F4573 /* RadialButton.m */,
 				82AD248918119F85002F4573 /* Images.xcassets */,
 				82AD247818119F85002F4573 /* Supporting Files */,
 			);
@@ -251,6 +256,7 @@
 			files = (
 				82AD248818119F85002F4573 /* ViewController.m in Sources */,
 				82AD248218119F85002F4573 /* AppDelegate.m in Sources */,
+				82AD24A81811A008002F4573 /* RadialButton.m in Sources */,
 				82AD247E18119F85002F4573 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
