@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ThumbWheelViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <ThumbWheelDelegate>
 
 @end

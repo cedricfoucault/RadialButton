@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821EFD461826B4CD00F926B5 /* UIScreen+PhysicalSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 821EFD451826B4CD00F926B5 /* UIScreen+PhysicalSize.m */; };
+		821EFD491826B77C00F926B5 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 821EFD481826B77C00F926B5 /* UIDevice+Hardware.m */; };
+		828E2EDD181E5DA4004A7F09 /* ThumbWheelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 828E2EDC181E5DA4004A7F09 /* ThumbWheelViewController.m */; };
+		828E2EE0181EEC46004A7F09 /* RadialButtonLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 828E2EDF181EEC46004A7F09 /* RadialButtonLayer.m */; };
 		82AD247218119F85002F4573 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AD247118119F85002F4573 /* Foundation.framework */; };
 		82AD247418119F85002F4573 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AD247318119F85002F4573 /* CoreGraphics.framework */; };
 		82AD247618119F85002F4573 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AD247518119F85002F4573 /* UIKit.framework */; };
@@ -35,6 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		821EFD441826B4CD00F926B5 /* UIScreen+PhysicalSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+PhysicalSize.h"; sourceTree = "<group>"; };
+		821EFD451826B4CD00F926B5 /* UIScreen+PhysicalSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+PhysicalSize.m"; sourceTree = "<group>"; };
+		821EFD471826B77C00F926B5 /* UIDevice+Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Hardware.h"; sourceTree = "<group>"; };
+		821EFD481826B77C00F926B5 /* UIDevice+Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Hardware.m"; sourceTree = "<group>"; };
+		828E2EDB181E5DA4004A7F09 /* ThumbWheelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbWheelViewController.h; sourceTree = "<group>"; };
+		828E2EDC181E5DA4004A7F09 /* ThumbWheelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbWheelViewController.m; sourceTree = "<group>"; };
+		828E2EDE181EEC46004A7F09 /* RadialButtonLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadialButtonLayer.h; sourceTree = "<group>"; };
+		828E2EDF181EEC46004A7F09 /* RadialButtonLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadialButtonLayer.m; sourceTree = "<group>"; };
 		82AD246E18119F85002F4573 /* Radial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82AD247118119F85002F4573 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82AD247318119F85002F4573 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -120,8 +132,16 @@
 				82AD248318119F85002F4573 /* Main.storyboard */,
 				82AD248618119F85002F4573 /* ViewController.h */,
 				82AD248718119F85002F4573 /* ViewController.m */,
+				828E2EDB181E5DA4004A7F09 /* ThumbWheelViewController.h */,
+				828E2EDC181E5DA4004A7F09 /* ThumbWheelViewController.m */,
 				82AD24A61811A008002F4573 /* RadialButton.h */,
 				82AD24A71811A008002F4573 /* RadialButton.m */,
+				828E2EDE181EEC46004A7F09 /* RadialButtonLayer.h */,
+				828E2EDF181EEC46004A7F09 /* RadialButtonLayer.m */,
+				821EFD471826B77C00F926B5 /* UIDevice+Hardware.h */,
+				821EFD481826B77C00F926B5 /* UIDevice+Hardware.m */,
+				821EFD441826B4CD00F926B5 /* UIScreen+PhysicalSize.h */,
+				821EFD451826B4CD00F926B5 /* UIScreen+PhysicalSize.m */,
 				82AD248918119F85002F4573 /* Images.xcassets */,
 				82AD247818119F85002F4573 /* Supporting Files */,
 			);
@@ -256,8 +276,12 @@
 			files = (
 				82AD248818119F85002F4573 /* ViewController.m in Sources */,
 				82AD248218119F85002F4573 /* AppDelegate.m in Sources */,
+				828E2EE0181EEC46004A7F09 /* RadialButtonLayer.m in Sources */,
 				82AD24A81811A008002F4573 /* RadialButton.m in Sources */,
 				82AD247E18119F85002F4573 /* main.m in Sources */,
+				828E2EDD181E5DA4004A7F09 /* ThumbWheelViewController.m in Sources */,
+				821EFD461826B4CD00F926B5 /* UIScreen+PhysicalSize.m in Sources */,
+				821EFD491826B77C00F926B5 /* UIDevice+Hardware.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +492,7 @@
 				82AD24A218119F85002F4573 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		82AD24A318119F85002F4573 /* Build configuration list for PBXNativeTarget "RadialTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +501,7 @@
 				82AD24A518119F85002F4573 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
