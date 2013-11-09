@@ -16,6 +16,7 @@
 @property (nonatomic) CGFloat angleMin; // radians
 @property (nonatomic) CGFloat angleMax; // radians
 @property (copy, nonatomic) NSString *title;
+@property (strong, nonatomic) UIColor *buttonColor;
 
 // readonly parameters
 @property (readonly, nonatomic) CGFloat widthButton;

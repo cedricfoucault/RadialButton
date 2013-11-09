@@ -8,14 +8,17 @@
 
 #import "RadialButton.h"
 
-static const CGFloat borderWidth = 0.0;
+static const CGFloat BORDER_WIDTH = 0.0;
+static const CGFloat TEXT_RADIUS_OFFSET = 5.0;
+
+static const CGFloat WIDTH_FRAME = 100;
+static const CGFloat HEIGHT_FRAME = 100;
 
 @interface RadialButton ()
 
 @property CGPoint arcCenter;
 
 - (NSAttributedString *)attributedTitle;
-- (UIColor *)titleColorForState:(UIControlState)state;
 
 @end
 
@@ -38,9 +41,11 @@ static const CGFloat borderWidth = 0.0;
         _radiusOuter = radiusOuter;
         _angleMin = angleMin;
         _angleMax = angleMax;
-        [self updateFrame];
+        [self _updateFrame];
         self.backgroundColor = [UIColor clearColor];
+        self.clipsToBounds = NO;
         [self addTarget:self action:@selector(setNeedsDisplay) forControlEvents:UIControlEventAllTouchEvents];
+        _buttonColor = [UIColor blackColor];
 //        _titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
 //        _titleLabel.textColor = [UIColor whiteColor];
 //        [self addSubview:_titleLabel];
@@ -48,7 +53,7 @@ static const CGFloat borderWidth = 0.0;
     return self;
 }
 
-- (void)updateFrame {
+- (void)_updateFrame {
     self.frame = CGRectMake(self.arcCenter.x + self.xFrame, self.arcCenter.y - self.yFrame, self.widthFrame, self.heightFrame);
     [self setNeedsDisplay];
 }
@@ -67,38 +72,49 @@ static const CGFloat borderWidth = 0.0;
 }
 
 - (NSAttributedString *)attributedTitle {
-    NSDictionary *attributes = [[NSDictionary alloc] initWithObjectsAndKeys:
-                      [UIFont systemFontOfSize:[UIFont systemFontSize]], NSFontAttributeName,
-                      [self titleColorForState:self.state], NSForegroundColorAttributeName, nil];
+    NSDictionary *attributes;
+    switch (self.state) {
+        case UIControlStateHighlighted:
+            attributes = [[NSDictionary alloc] initWithObjectsAndKeys:
+                          [UIFont boldSystemFontOfSize:[UIFont systemFontSize]], NSFontAttributeName,
+                          [UIColor whiteColor], NSForegroundColorAttributeName, nil];
+            break;
+            
+        default:
+            attributes = [[NSDictionary alloc] initWithObjectsAndKeys:
+                          [UIFont systemFontOfSize:[UIFont systemFontSize]], NSFontAttributeName,
+                          [UIColor whiteColor], NSForegroundColorAttributeName, nil];
+            break;
+    }
     return [[NSAttributedString alloc] initWithString:self.title attributes:attributes];
 }
 
-- (UIColor *)titleColorForState:(UIControlState)state {
-    if (state == UIControlStateHighlighted) {
-        return [UIColor blackColor];
-    } else {
-        return [UIColor whiteColor];
-    }
-}
+//- (UIColor *)titleColorForState:(UIControlState)state {
+//    if (state == UIControlStateHighlighted) {
+//        return [UIColor blackColor];
+//    } else {
+//        return [UIColor blackColor];
+//    }
+//}
 
 - (void)setAngleMax:(CGFloat)angleMax {
     _angleMax = angleMax;
-    [self updateFrame];
+    [self _updateFrame];
 }
 
 - (void)setAngleMin:(CGFloat)angleMin {
     _angleMin = angleMin;
-    [self updateFrame];
+    [self _updateFrame];
 }
 
 - (void)setRadiusOuter:(CGFloat)radiusOuter {
     _radiusOuter = radiusOuter;
-    [self updateFrame];
+    [self _updateFrame];
 }
 
 - (void)setRadiusInner:(CGFloat)radiusInner {
     _radiusInner = radiusInner;
-    [self updateFrame];
+    [self _updateFrame];
 }
 
 - (CGFloat)widthButton {
@@ -127,27 +143,27 @@ static const CGFloat borderWidth = 0.0;
     return (self.yFrame - self.radiusInner * sin(self.angleMin));
 }
 
-- (CGMutablePathRef)drawPath {
-    // create the path
-    CGMutablePathRef drawPath = CGPathCreateMutable();
-    // start at (xInnerMax, 0)
-    CGFloat xInnerMax = self.radiusInner * cos(self.angleMin) - self.xFrame;
-//    CGFloat yInnerMax = self.radiusInner * sin(self.angleMax) - self.yFrame;
-    CGPathMoveToPoint(drawPath, NULL, xInnerMax, self.heightFrame);
-//    CGPathMoveToPoint(drawPath, NULL, 0.0, yInnerMax);
-    // add the inner arc
-    CGPathAddArc(drawPath, NULL, -self.xFrame, self.yFrame, self.radiusInner, self.angleMin, self.angleMax, false);
-//    CGPathAddArc(drawPath, NULL, -self.xFrame, -self.yFrame, self.radiusInner, self.angleMax, self.angleMin, true);
-    // add the outer arc and connect the 2 arcs
-    CGPathAddArc(drawPath, NULL, -self.xFrame, self.yFrame, self.radiusOuter, self.angleMax, self.angleMin, true);
-//    CGPathAddArc(drawPath, NULL, -self.xFrame, -self.yFrame, self.radiusOuter, self.angleMin, self.angleMax, false);
-    CGPathCloseSubpath(drawPath);
-    return drawPath;
-}
+//- (CGMutablePathRef)drawPath {
+//    // create the path
+//    CGMutablePathRef drawPath = CGPathCreateMutable();
+//    // start at (xInnerMax, 0)
+//    CGFloat xInnerMax = self.radiusInner * cos(self.angleMin) - self.xFrame;
+////    CGFloat yInnerMax = self.radiusInner * sin(self.angleMax) - self.yFrame;
+//    CGPathMoveToPoint(drawPath, NULL, xInnerMax, self.heightFrame);
+////    CGPathMoveToPoint(drawPath, NULL, 0.0, yInnerMax);
+//    // add the inner arc
+//    CGPathAddArc(drawPath, NULL, -self.xFrame, self.yFrame, self.radiusInner, self.angleMin, self.angleMax, false);
+////    CGPathAddArc(drawPath, NULL, -self.xFrame, -self.yFrame, self.radiusInner, self.angleMax, self.angleMin, true);
+//    // add the outer arc and connect the 2 arcs
+//    CGPathAddArc(drawPath, NULL, -self.xFrame, self.yFrame, self.radiusOuter, self.angleMax, self.angleMin, true);
+////    CGPathAddArc(drawPath, NULL, -self.xFrame, -self.yFrame, self.radiusOuter, self.angleMin, self.angleMax, false);
+//    CGPathCloseSubpath(drawPath);
+//    return drawPath;
+//}
 
 - (UIBezierPath *)drawPathUI {
     UIBezierPath *drawPath = [UIBezierPath bezierPath];
-    drawPath.lineWidth = borderWidth;
+    drawPath.lineWidth = BORDER_WIDTH;
     CGFloat xInnerMax = self.radiusInner * cos(self.angleMin) - self.xFrame;
     [drawPath moveToPoint:CGPointMake(xInnerMax, self.heightFrame)];
     CGFloat angleStart = - self.angleMin;
@@ -203,7 +219,8 @@ static const CGFloat borderWidth = 0.0;
     // Drawing code
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetRGBStrokeColor(context, 0.0, 0.0, 0.0, 1.0); // black stroke
-    CGContextSetRGBFillColor(context, 1.0, 0.5, 0.0, 1.0); // orange fill
+//    CGContextSetRGBFillColor(context, 1.0, 0.5, 0.0, 1.0); // orange fill
+    CGContextSetFillColorWithColor(context, self.buttonColor.CGColor);
     UIBezierPath *drawPath = [self drawPathUI];
     [drawPath stroke];
     [drawPath fill];
@@ -214,6 +231,10 @@ static const CGFloat borderWidth = 0.0;
     CGFloat xmid = radiusMid * cos(angleMid) - self.xFrame;
     CGFloat ymid = self.yFrame - (radiusMid * sin(angleMid));
     [self.attributedTitle drawAtPoint:CGPointMake(xmid - titleSize.width / 2, ymid - titleSize.height / 2)];
+//    CGFloat radiusText = self.radiusOuter;
+//    CGFloat xText = radiusText * cos(angleMid) - self.xFrame;
+//    CGFloat yText = self.yFrame - (radiusText * sin(angleMid));
+//    [self.attributedTitle drawAtPoint:CGPointMake(xText, yText)];
 }
 
 //- (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event {

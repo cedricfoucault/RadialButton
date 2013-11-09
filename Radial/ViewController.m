@@ -11,12 +11,13 @@
 #import "UIDevice+Hardware.h"
 #import "UIScreen+PhysicalSize.h"
 
-@interface ViewController ()
+@interface ViewController () <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 - (IBAction)handleTap:(UITapGestureRecognizer *)sender;
 @property (strong, nonatomic) ThumbWheelViewController *thumbWheelViewController;
 @property (weak, nonatomic) IBOutlet UIView *thumbWheelView;
+@property (strong, nonatomic) IBOutlet UITapGestureRecognizer *tripleTapRecognizer;
 
 @end
 
@@ -80,10 +81,21 @@
 //            self.view.backgroundColor = [UIColor blackColor];
 //        }
         CGPoint location = [sender locationInView:self.view];
-        self.thumbWheelView.frame = CGRectMake(self.thumbWheelView.frame.origin.x,
-                                               location.y - self.thumbWheelView.frame.size.height / 2,
-                                               self.thumbWheelView.frame.size.width, self.thumbWheelView.frame.size.height);
+        [self.thumbWheelViewController moveToLocation:location];
+//        self.thumbWheelView.frame = CGRectMake(self.thumbWheelView.frame.origin.x,
+//                                               location.y - self.thumbWheelView.frame.size.height / 2,
+//                                               self.thumbWheelView.frame.size.width, self.thumbWheelView.frame.size.height);
     }
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if (gestureRecognizer == self.tripleTapRecognizer) {
+        // Disallow recognition of triple tap in any UIControl
+        if ([touch.view isKindOfClass:[UIControl class]]) {
+            return  NO;
+        }
+    }
+    return YES;
 }
 
 @end

@@ -9,8 +9,20 @@
 /* Begin PBXBuildFile section */
 		821EFD461826B4CD00F926B5 /* UIScreen+PhysicalSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 821EFD451826B4CD00F926B5 /* UIScreen+PhysicalSize.m */; };
 		821EFD491826B77C00F926B5 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 821EFD481826B77C00F926B5 /* UIDevice+Hardware.m */; };
+		82339307182DB690008F5046 /* sPadDArrow66%.png in Resources */ = {isa = PBXBuildFile; fileRef = 82339302182DB690008F5046 /* sPadDArrow66%.png */; };
+		82339308182DB690008F5046 /* sPadLArrow66%.png in Resources */ = {isa = PBXBuildFile; fileRef = 82339303182DB690008F5046 /* sPadLArrow66%.png */; };
+		82339309182DB690008F5046 /* sPadRArrow66%.png in Resources */ = {isa = PBXBuildFile; fileRef = 82339304182DB690008F5046 /* sPadRArrow66%.png */; };
+		8233930A182DB690008F5046 /* sPadTouchCircle66%.png in Resources */ = {isa = PBXBuildFile; fileRef = 82339305182DB690008F5046 /* sPadTouchCircle66%.png */; };
+		8233930B182DB690008F5046 /* sPadUArrow66%.png in Resources */ = {isa = PBXBuildFile; fileRef = 82339306182DB690008F5046 /* sPadUArrow66%.png */; };
+		82693B59182D559A00B612D9 /* SPadContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82693B58182D559A00B612D9 /* SPadContainerView.m */; };
+		82693B5B182D863E00B612D9 /* SPadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82693B5A182D863E00B612D9 /* SPadView.xib */; };
+		82847C34182DA200001DEBEF /* S-Pad.png in Resources */ = {isa = PBXBuildFile; fileRef = 82847C33182DA200001DEBEF /* S-Pad.png */; };
+		82847C36182DA6D1001DEBEF /* sPadTouchCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 82847C35182DA6D1001DEBEF /* sPadTouchCircle.png */; };
+		82847C38182DA71C001DEBEF /* sPadLArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 82847C37182DA71C001DEBEF /* sPadLArrow.png */; };
+		82847C3A182DA784001DEBEF /* sPadRArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 82847C39182DA784001DEBEF /* sPadRArrow.png */; };
+		82847C3C182DA794001DEBEF /* sPadDArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 82847C3B182DA794001DEBEF /* sPadDArrow.png */; };
+		82847C3E182DA79E001DEBEF /* sPadUArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 82847C3D182DA79E001DEBEF /* sPadUArrow.png */; };
 		828E2EDD181E5DA4004A7F09 /* ThumbWheelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 828E2EDC181E5DA4004A7F09 /* ThumbWheelViewController.m */; };
-		828E2EE0181EEC46004A7F09 /* RadialButtonLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 828E2EDF181EEC46004A7F09 /* RadialButtonLayer.m */; };
 		82AD247218119F85002F4573 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AD247118119F85002F4573 /* Foundation.framework */; };
 		82AD247418119F85002F4573 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AD247318119F85002F4573 /* CoreGraphics.framework */; };
 		82AD247618119F85002F4573 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82AD247518119F85002F4573 /* UIKit.framework */; };
@@ -43,10 +55,22 @@
 		821EFD451826B4CD00F926B5 /* UIScreen+PhysicalSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+PhysicalSize.m"; sourceTree = "<group>"; };
 		821EFD471826B77C00F926B5 /* UIDevice+Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Hardware.h"; sourceTree = "<group>"; };
 		821EFD481826B77C00F926B5 /* UIDevice+Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Hardware.m"; sourceTree = "<group>"; };
+		82339302182DB690008F5046 /* sPadDArrow66%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sPadDArrow66%.png"; sourceTree = "<group>"; };
+		82339303182DB690008F5046 /* sPadLArrow66%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sPadLArrow66%.png"; sourceTree = "<group>"; };
+		82339304182DB690008F5046 /* sPadRArrow66%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sPadRArrow66%.png"; sourceTree = "<group>"; };
+		82339305182DB690008F5046 /* sPadTouchCircle66%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sPadTouchCircle66%.png"; sourceTree = "<group>"; };
+		82339306182DB690008F5046 /* sPadUArrow66%.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sPadUArrow66%.png"; sourceTree = "<group>"; };
+		82693B57182D559A00B612D9 /* SPadContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPadContainerView.h; sourceTree = "<group>"; };
+		82693B58182D559A00B612D9 /* SPadContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPadContainerView.m; sourceTree = "<group>"; };
+		82693B5A182D863E00B612D9 /* SPadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SPadView.xib; sourceTree = "<group>"; };
+		82847C33182DA200001DEBEF /* S-Pad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "S-Pad.png"; sourceTree = "<group>"; };
+		82847C35182DA6D1001DEBEF /* sPadTouchCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sPadTouchCircle.png; sourceTree = "<group>"; };
+		82847C37182DA71C001DEBEF /* sPadLArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sPadLArrow.png; sourceTree = "<group>"; };
+		82847C39182DA784001DEBEF /* sPadRArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sPadRArrow.png; sourceTree = "<group>"; };
+		82847C3B182DA794001DEBEF /* sPadDArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sPadDArrow.png; sourceTree = "<group>"; };
+		82847C3D182DA79E001DEBEF /* sPadUArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sPadUArrow.png; sourceTree = "<group>"; };
 		828E2EDB181E5DA4004A7F09 /* ThumbWheelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThumbWheelViewController.h; sourceTree = "<group>"; };
 		828E2EDC181E5DA4004A7F09 /* ThumbWheelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThumbWheelViewController.m; sourceTree = "<group>"; };
-		828E2EDE181EEC46004A7F09 /* RadialButtonLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadialButtonLayer.h; sourceTree = "<group>"; };
-		828E2EDF181EEC46004A7F09 /* RadialButtonLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadialButtonLayer.m; sourceTree = "<group>"; };
 		82AD246E18119F85002F4573 /* Radial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Radial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82AD247118119F85002F4573 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		82AD247318119F85002F4573 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,9 +118,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82693B5C182D8ED800B612D9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				82847C35182DA6D1001DEBEF /* sPadTouchCircle.png */,
+				82847C3D182DA79E001DEBEF /* sPadUArrow.png */,
+				82847C39182DA784001DEBEF /* sPadRArrow.png */,
+				82847C3B182DA794001DEBEF /* sPadDArrow.png */,
+				82847C37182DA71C001DEBEF /* sPadLArrow.png */,
+				82339302182DB690008F5046 /* sPadDArrow66%.png */,
+				82339303182DB690008F5046 /* sPadLArrow66%.png */,
+				82339304182DB690008F5046 /* sPadRArrow66%.png */,
+				82339305182DB690008F5046 /* sPadTouchCircle66%.png */,
+				82339306182DB690008F5046 /* sPadUArrow66%.png */,
+				82847C33182DA200001DEBEF /* S-Pad.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		82AD246518119F85002F4573 = {
 			isa = PBXGroup;
 			children = (
+				82693B5C182D8ED800B612D9 /* Assets */,
 				82AD247718119F85002F4573 /* Radial */,
 				82AD249618119F85002F4573 /* RadialTests */,
 				82AD247018119F85002F4573 /* Frameworks */,
@@ -130,14 +173,15 @@
 				82AD248018119F85002F4573 /* AppDelegate.h */,
 				82AD248118119F85002F4573 /* AppDelegate.m */,
 				82AD248318119F85002F4573 /* Main.storyboard */,
+				82693B5A182D863E00B612D9 /* SPadView.xib */,
 				82AD248618119F85002F4573 /* ViewController.h */,
 				82AD248718119F85002F4573 /* ViewController.m */,
 				828E2EDB181E5DA4004A7F09 /* ThumbWheelViewController.h */,
 				828E2EDC181E5DA4004A7F09 /* ThumbWheelViewController.m */,
+				82693B57182D559A00B612D9 /* SPadContainerView.h */,
+				82693B58182D559A00B612D9 /* SPadContainerView.m */,
 				82AD24A61811A008002F4573 /* RadialButton.h */,
 				82AD24A71811A008002F4573 /* RadialButton.m */,
-				828E2EDE181EEC46004A7F09 /* RadialButtonLayer.h */,
-				828E2EDF181EEC46004A7F09 /* RadialButtonLayer.m */,
 				821EFD471826B77C00F926B5 /* UIDevice+Hardware.h */,
 				821EFD481826B77C00F926B5 /* UIDevice+Hardware.m */,
 				821EFD441826B4CD00F926B5 /* UIScreen+PhysicalSize.h */,
@@ -224,6 +268,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Cédric Foucault";
 				TargetAttributes = {
+					82AD246D18119F85002F4573 = {
+						DevelopmentTeam = 7HVPEZWBRD;
+					};
 					82AD248E18119F85002F4573 = {
 						TestTargetID = 82AD246D18119F85002F4573;
 					};
@@ -253,9 +300,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82847C3C182DA794001DEBEF /* sPadDArrow.png in Resources */,
+				82693B5B182D863E00B612D9 /* SPadView.xib in Resources */,
+				8233930B182DB690008F5046 /* sPadUArrow66%.png in Resources */,
+				82339309182DB690008F5046 /* sPadRArrow66%.png in Resources */,
+				8233930A182DB690008F5046 /* sPadTouchCircle66%.png in Resources */,
+				82847C38182DA71C001DEBEF /* sPadLArrow.png in Resources */,
+				82847C3E182DA79E001DEBEF /* sPadUArrow.png in Resources */,
 				82AD248A18119F85002F4573 /* Images.xcassets in Resources */,
 				82AD247C18119F85002F4573 /* InfoPlist.strings in Resources */,
+				82847C36182DA6D1001DEBEF /* sPadTouchCircle.png in Resources */,
+				82847C34182DA200001DEBEF /* S-Pad.png in Resources */,
+				82339308182DB690008F5046 /* sPadLArrow66%.png in Resources */,
+				82847C3A182DA784001DEBEF /* sPadRArrow.png in Resources */,
 				82AD248518119F85002F4573 /* Main.storyboard in Resources */,
+				82339307182DB690008F5046 /* sPadDArrow66%.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,10 +335,10 @@
 			files = (
 				82AD248818119F85002F4573 /* ViewController.m in Sources */,
 				82AD248218119F85002F4573 /* AppDelegate.m in Sources */,
-				828E2EE0181EEC46004A7F09 /* RadialButtonLayer.m in Sources */,
 				82AD24A81811A008002F4573 /* RadialButton.m in Sources */,
 				82AD247E18119F85002F4573 /* main.m in Sources */,
 				828E2EDD181E5DA4004A7F09 /* ThumbWheelViewController.m in Sources */,
+				82693B59182D559A00B612D9 /* SPadContainerView.m in Sources */,
 				821EFD461826B4CD00F926B5 /* UIScreen+PhysicalSize.m in Sources */,
 				821EFD491826B77C00F926B5 /* UIDevice+Hardware.m in Sources */,
 			);
@@ -410,10 +469,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Radial/Radial-Prefix.pch";
 				INFOPLIST_FILE = "Radial/Radial-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B1556861-32D5-4E27-852F-077F27DB16BF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -423,10 +485,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Radial/Radial-Prefix.pch";
 				INFOPLIST_FILE = "Radial/Radial-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B1556861-32D5-4E27-852F-077F27DB16BF";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

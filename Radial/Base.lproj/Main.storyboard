@@ -22,10 +22,10 @@
                             <view contentMode="scaleToFill" id="FQY-2k-uKp">
                                 <rect key="frame" x="50" y="201" width="567" height="567"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="V2K-r1-Sfc" appends="YES" id="PcD-A2-9bi"/>
@@ -34,12 +34,14 @@
                     <connections>
                         <outlet property="statusLabel" destination="TmZ-TA-5a8" id="j3b-3D-mtC"/>
                         <outlet property="thumbWheelView" destination="FQY-2k-uKp" id="v5b-NE-1O2"/>
+                        <outlet property="tripleTapRecognizer" destination="V2K-r1-Sfc" id="ahC-bh-hb6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer numberOfTapsRequired="3" id="V2K-r1-Sfc">
                     <connections>
                         <action selector="handleTap:" destination="BYZ-38-t0r" id="yMB-T8-9Pj"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="hZQ-S5-iVx"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

@@ -24,5 +24,6 @@
 - (id)initWithView:(UIView *)view delegate:(id<ThumbWheelDelegate>)delegate;
 //- (void)rotateClockwise:(BOOL)clockwise animated:(BOOL)animated;
 - (void)fitToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation;
+- (void)moveToLocation:(CGPoint)location;
 
 @end
